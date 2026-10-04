@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ELITE FIT — премиальный фитнес-клуб для тех, кто стремится к совершенству. Групповые занятия, тренажёрный зал, йога, бокс и многое другое.">
+  <title>ELITE FIT — Премиальный фитнес-клуб</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =================== HEADER =================== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">ELITE <span>FIT</span></a>
+
+      <input class="header__menu-state" type="checkbox" id="header-menu">
+      <label class="header__burger" for="header-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="#home"       class="header__nav-link">Главная</a>
+        <a href="#directions" class="header__nav-link">Направления</a>
+        <a href="#gallery"    class="header__nav-link">Галерея</a>
+        <a href="#video"      class="header__nav-link">Видео</a>
+        <a href="#pricing"    class="header__nav-link">Цены</a>
+        <a href="calc.html"    class="header__nav-link">Калькулятор</a>
+        <a href="#contact"    class="header__nav-link">Контакты</a>
+      </nav>
+
+      <nav class="header__mobile-menu" aria-label="Мобильная навигация">
+        <a href="#home"       class="header__mobile-link">Главная</a>
+        <a href="#directions" class="header__mobile-link">Направления</a>
+        <a href="#gallery"    class="header__mobile-link">Галерея</a>
+        <a href="#video"      class="header__mobile-link">Видео</a>
+        <a href="#pricing"    class="header__mobile-link">Цены</a>
+        <a href="calc.html"    class="header__mobile-link">Калькулятор</a>
+        <a href="#contact"    class="header__mobile-link">Контакты</a>
+        <a href="#" class="header__mobile-logo">ELITE <span>FIT</span></a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <img
+        src="assets/png/1.png"
+        alt="Тренировочный зал ELITE FIT"
+      >
+    </div>
+    <div class="hero__content">
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          Раскройте свой<br>
+          <span>потенциал</span>
+        </h1>
+        <p class="hero__desc">
+          Премиальный фитнес-клуб для тех, кто стремится к совершенству.
+          Профессиональные тренеры, современное оборудование и атмосфера роскоши.
+        </p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary hero__btn">Начать тренировки</a>
+          <a href="#pricing" class="btn btn--outline hero__btn">Узнать цены</a>
+        </div>
+      </div>
+      <div class="hero__stats" role = "group" aria-label="Преимущества клуба">
+        <div class="hero__stat">
+          <div class="hero__stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 12v8M10 10v12M22 10v12M26 12v8" />
+              <path d="M10 16h12" />
+              <path d="M4 12h2v8H4zM26 12h2v8h-2z" />
+            </svg>
+          </div>
+          <span class="hero__stat-text">200+ занятий в месяц</span>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 5l2.4 4.8 5.3.8-3.8 3.7.9 5.2L16 17l-4.8 2.5.9-5.2-3.8-3.7 5.3-.8L16 5z" />
+              <path d="M11 21c.5 3.4 2.5 6 5 6s4.5-2.6 5-6" />
+              <path d="M13.5 23.5h5" />
+            </svg>
+          </div>
+          <span class="hero__stat-text">Топовые тренеры</span>
+        </div>
+        <div class="hero__stat">
+          <div class="hero__stat-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 6h10v4c0 3.7-2.3 6.7-5 6.7S11 13.7 11 10V6z" />
+              <path d="M11 8H8c0 3 1.5 5 4 5M21 8h3c0 3-1.5 5-4 5" />
+              <path d="M16 16.7v5.3" />
+              <path d="M12 27h8" />
+              <path d="M13 22h6" />
+            </svg>
+          </div>
+          <span class="hero__stat-text">Премиальное оборудование</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== DIRECTIONS =================== -->
+  <section class="directions" id="directions">
+    <div class="container">
+      <div class="directions__header">
+        <h2 class="section-title">Направления</h2>
+        <p class="section-subtitle">Выберите тренировку под свои цели и предпочтения</p>
+      </div>
+      <div class="directions__grid">
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/2.png" alt="Тренажёрный зал">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="24" r="6" />
+                <circle cx="30" cy="18" r="6" />
+                <circle cx="30" cy="30" r="6" />
+                <circle cx="14" cy="34" r="5" />
+                <path d="M22 22l4-2M22 27l4 2M18 30l-2 1" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Тренажёрный зал</h3>
+            <p class="direction-card__desc">Просторные залы, новое современное оборудование и профессиональный тренерский состав.</p>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/6.png" alt="Студия пилатес">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 10h10" />
+                <path d="M24 10v22" />
+                <path d="M18 32h12" />
+                <path d="M18 20h-5v10" />
+                <path d="M30 20h5v10" />
+                <path d="M16 38h16" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Студия пилатес</h3>
+            <p class="direction-card__desc">В студии вы сможете развить гибкость, силу и осанку, а также улучшить своё физическое и эмоциональное состояние.</p>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/7.png" alt="Бокс и единоборства">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 10h9a8 8 0 018 8v10a10 10 0 01-10 10h-4A10 10 0 0112 28v-8" />
+                <path d="M12 20v-5a4 4 0 018 0v9" />
+                <path d="M20 18h8" />
+                <path d="M20 26h15" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Бокс и единоборства</h3>
+            <p class="direction-card__desc">Зона бойцовского клуба уникальна не только для фитнес-индустрии, но и среди студий единоборств.</p>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/8.png" alt="Танцевальная студия">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 16v12c0 7 4 10 7 10s7-3 7-10V16" />
+                <path d="M13 18l-4 9" />
+                <path d="M35 18l4 9" />
+                <path d="M18 31l-4 8" />
+                <path d="M30 31l4 8" />
+                <circle cx="24" cy="11" r="4" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Танцевальная студия</h3>
+            <p class="direction-card__desc">Разные виды восточных, латинских танцев, классические базовые направления и модные современные.</p>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/9.png" alt="Функциональная йога">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M24 36c-8-3-12-8-12-15 6 0 10 2 12 8 2-6 6-8 12-8 0 7-4 12-12 15z" />
+                <path d="M24 28c-4-6-4-12 0-18 4 6 4 12 0 18z" />
+                <path d="M10 38h28" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Функциональная йога</h3>
+            <p class="direction-card__desc">Полноценная студия, большой зал для групповых занятий и залы персональных тренировок. 4 направления йоги.</p>
+          </div>
+        </article>
+
+        <article class="direction-card">
+          <div class="direction-card__img">
+            <img src="assets/png/10.png" alt="Групповые программы">
+          </div>
+          <div class="direction-card__content">
+            <span class="direction-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="17" cy="17" r="5" />
+                <circle cx="31" cy="17" r="5" />
+                <circle cx="12" cy="31" r="5" />
+                <circle cx="24" cy="31" r="5" />
+                <circle cx="36" cy="31" r="5" />
+              </svg>
+            </span>
+            <h3 class="direction-card__title">Групповые программы</h3>
+            <p class="direction-card__desc">Разнообразие уроков по виду и типу нагрузки не оставит равнодушным даже самого искушённого гостя.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== GALLERY =================== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery__header">
+        <h2 class="section-title">Галерея</h2>
+        <p class="section-subtitle">Взгляните на наш премиальный клуб</p>
+      </div>
+      <div class="gallery__filters">
+        <button type="button" class="gallery__filter-btn is-active" data-category="all">Все</button>
+        <button type="button" class="gallery__filter-btn" data-category="gym">Тренажёрный зал</button>
+        <button type="button" class="gallery__filter-btn" data-category="groups">Групповые занятия</button>
+        <button type="button" class="gallery__filter-btn" data-category="studios">Студии</button>
+      </div>
+      <div class="gallery__slider">
+        <button type="button" class="gallery__control gallery__control--prev" aria-label="Предыдущие фото">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6" />
+          </svg>
+        </button>
+        <div class="gallery__main">
+          <div class="gallery__viewport">
+            <div class="gallery__track"></div>
+          </div>
+        </div>
+        <button type="button" class="gallery__control gallery__control--next" aria-label="Следующие фото">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== VIDEO =================== -->
+  <section class="video-section" id="video">
+    <div class="video-section__inner">
+      <h2 class="video-section__title">Видеообзор тренировки по йоге</h2>
+      <div class="video-section__preview">
+        <input
+          class="video-section__state"
+          type="checkbox"
+          id="video-yoga-toggle"
+        >
+        <video
+          class="video-section__video"
+          src="assets/mp4/video.mp4"
+          poster="assets/jpg/video-poster.jpg"
+          preload="auto"
+          playsinline
+          autoplay
+          muted
+          controls
+          aria-label="Видеообзор тренировки по йоге"
+        ></video>
+        <label class="video-section__cover" for="video-yoga-toggle">
+          <span class="video-section__cover-hint">Показать видео</span>
+          <span class="video-section__cover-icon" aria-hidden="true">
+            <span class="video-section__play-btn">
+              <span class="video-section__play-ring video-section__play-ring--outer"></span>
+              <span class="video-section__play-ring video-section__play-ring--inner"></span>
+              <span class="video-section__play-triangle"></span>
+            </span>
+          </span>
+        </label>
+      </div>
+      <div class="video-section__stats">
+        <div class="video-section__stat-item">
+          <div class="video-section__stat-text">
+            <strong>65+ м²</strong>
+            <span>Площадь студии</span>
+          </div>
+        </div>
+        <div class="video-section__stat-item">
+          <div class="video-section__stat-text">
+            <strong>4 направления</strong>
+            <span>Hatha Yoga, Vinyasa Flow, Power Yoga, Ashtanga Yoga</span>
+          </div>
+        </div>
+        <div class="video-section__stat-item">
+          <div class="video-section__stat-text">
+            <strong>атмосфера</strong>
+            <span>Свет, пространство, тишина</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PRICING =================== -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing__header">
+        <h2 class="section-title">Цены на тарифы</h2>
+        <p class="section-subtitle">Выберите подходящий тариф для достижения ваших целей</p>
+      </div>
+      <div class="pricing__grid">
+
+        <!-- GROUP -->
+        <div class="pricing-card">
+          <div>
+            <p class="pricing-card__name">GROUP</p>
+            <p class="pricing-card__subtitle">Групповые тренировки</p>
+          </div>
+          <p class="pricing-card__price">220 Руб<span>/Месяц</span></p>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Безлимит групповых занятий</li>
+            <li class="pricing-card__feature">Доступ к раздевалкам</li>
+            <li class="pricing-card__feature">Бесплатный Wi-Fi</li>
+            <li class="pricing-card__feature">Душевые и сауна</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline pricing-card__btn">Выбрать тариф</a>
+        </div>
+
+        <!-- MIX — POPULAR -->
+        <div class="pricing-card pricing-card--popular">
+          <span class="pricing-card__badge">Популярный</span>
+          <div>
+            <p class="pricing-card__name">MIX</p>
+            <p class="pricing-card__subtitle">Группы + Тренажёрный зал</p>
+          </div>
+          <p class="pricing-card__price">340 Руб<span>/Месяц</span></p>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Всё из тарифа GROUP</li>
+            <li class="pricing-card__feature">Безлимит тренажёрного зала</li>
+            <li class="pricing-card__feature">Бесплатная парковка</li>
+            <li class="pricing-card__feature">Консультация нутрициолога</li>
+            <li class="pricing-card__feature">Скидка 25% на разные виды массажа в нашем SPA</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary pricing-card__btn">Выбрать тариф</a>
+        </div>
+
+        <!-- UNLIMIT -->
+        <div class="pricing-card">
+          <div>
+            <p class="pricing-card__name">UNLIMIT</p>
+            <p class="pricing-card__subtitle">Максимум возможностей</p>
+          </div>
+          <p class="pricing-card__price">670 Руб<span>/Месяц</span></p>
+          <ul class="pricing-card__features">
+            <li class="pricing-card__feature">Всё из тарифа MIX</li>
+            <li class="pricing-card__feature">8 персональных тренировок</li>
+            <li class="pricing-card__feature">Индивидуальная программа</li>
+            <li class="pricing-card__feature">Приоритетная запись</li>
+            <li class="pricing-card__feature">Персональный шкафчик</li>
+            <li class="pricing-card__feature">Бесплатные бизнес-лаундж, фитнес-бар</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline pricing-card__btn">Выбрать тариф</a>
+        </div>
+
+      </div>
+      <p class="pricing__note">
+        * Цены указаны за месячную подписку. Доступна оплата на 3, 6 и 12 месяцев со скидкой.
+      </p>
+    </div>
+  </section>
+
+  <!-- =================== CONTACT =================== -->
+  <section class="contact" id="contact">
+    <div class="contact__bg">
+      <img
+        src="assets/png/3.png"
+        alt=""
+        aria-hidden="true"
+      >
+    </div>
+    <div class="contact__inner">
+      <div class="contact__header">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <p class="section-subtitle">Оставьте заявку и получите бесплатную консультацию</p>
+      </div>
+      <div class="contact__form">
+        <div class="contact__field">
+          <label for="name">Имя*</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+        </div>
+        <div class="contact__field">
+          <label for="phone">Телефон*</label>
+          <input type="tel" id="phone" name="phone" placeholder="+375(33)123-45-67" required>
+        </div>
+        <div class="contact__field">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+        <div class="contact__field">
+          <label for="message">Сообщение</label>
+          <textarea id="message" name="message" placeholder="Расскажите подробнее о Ваших целях..."></textarea>
+        </div>
+        <button type="button" class="contact__submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 3L10 14" />
+            <path d="M21 3l-7 18-4-7-7-4 18-7z" />
+          </svg>
+          Отправить заявку
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">ELITE <span>FIT</span></a>
+        <p class="footer__brand-desc">
+          Премиальный фитнес-клуб для тех, кто стремится к совершенству
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Разработчик</h3>
+        <div class="footer__dev">
+          <p class="footer__dev-name">Viktar Tsybulskas</p>
+          <div class="footer__dev-links">
+            <a href="#" class="footer__dev-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M9 14l-2 2-2-2m4-8l4 4 4-4"/>
+              </svg>
+              — Figma
+            </a>
+            <a href="#" class="footer__dev-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7C6.73 19.91 6.14 18 6.14 18c-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.115 2.5.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/>
+              </svg>
+              — GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Контакты</h3>
+        <div class="footer__contacts">
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            г. Брест, ул. Московская, д. 201
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.19 6.19l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            +375(29)777-77-77
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            info@elitefit.com
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__col-title">Режим работы</h3>
+        <p class="footer__hours">Понедельник — Воскресенье</p>
+        <p class="footer__hours-value">24/7</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 ELITE FIT. Все права защищены.</p>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">SEO</a>
+        <a href="#" class="footer__bottom-link">ЗОЖ</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

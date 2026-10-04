@@ -1,0 +1,64 @@
+// ============================================
+// ELITE FIT — Типографика
+// ============================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+// --- Утилиты типографики ---
+.text-purple  { color: $color-purple; }
+.text-grey    { color: $color-grey; }
+.text-white   { color: $color-white; }
+.text-center  { text-align: center; }
+
+// --- Кнопки ---
+.btn {
+  @include btn-base;
+
+  // Фиолетовая кнопка (заполненная)
+  &--primary {
+    background-color: $color-purple;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-purple-hover;
+    }
+  }
+
+  // Кнопка с обводкой
+  &--outline {
+    background-color: transparent;
+    color: $color-grey;
+    border: 1.5px solid $color-grey;
+
+    &:hover {
+      background-color: $color-purple;
+      color: $color-white;
+      border-color: $color-purple;
+    }
+  }
+}
+
+// --- Контейнер ---
+.container {
+  @include container;
+}
+
+// --- Общие заголовки секций ---
+.section-title {
+  @include section-title;
+  margin-bottom: $spacing-sm;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $color-grey;
+  font-size: $font-size-base;
+  margin-bottom: $spacing-2xl;
+
+  @include tablet {
+    font-size: $font-size-md;
+  }
+}

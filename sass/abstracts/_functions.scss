@@ -1,0 +1,13 @@
+// ============================================
+// ELITE FIT — Sass функции
+// ============================================
+
+// Перевод px в rem
+@function rem($px, $base: 16) {
+  @return #{$px / $base}rem;
+}
+
+// Перевод px в em
+@function em($px, $base: 16) {
+  @return #{$px / $base}em;
+}

@@ -1,0 +1,56 @@
+// ============================================
+// ELITE FIT — Sass плейсхолдеры
+// ============================================
+
+@use 'variables' as *;
+
+// --- Карточка ---
+%card {
+  background-color: $color-card-bg;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// --- Изображение-обложка ---
+%img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// --- Текст-метка (тег) ---
+%badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: $border-radius-pill;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  letter-spacing: 0.5px;
+}
+
+// --- Скрытый элемент (только для скринридеров) ---
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// --- Оверлей поверх изображения ---
+%overlay {
+  position: absolute;
+  inset: 0;
+  background: $color-overlay;
+}

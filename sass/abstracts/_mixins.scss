@@ -1,0 +1,114 @@
+// ============================================
+// ELITE FIT — Sass миксины
+// ============================================
+
+@use 'variables' as *;
+
+// --- Медиа-запросы ---
+@mixin mobile {
+  @media (max-width: #{$bp-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$bp-laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$bp-desktop}) {
+    @content;
+  }
+}
+
+// --- Контейнер ---
+@mixin container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+
+  @include tablet {
+    padding: 0 $spacing-xl;
+  }
+
+  @include laptop {
+    padding: 0 $spacing-2xl;
+  }
+}
+
+// --- Flex по центру ---
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// --- Flex между элементами ---
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// --- Кнопка базовая ---
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: $border-radius-pill;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+// --- Обрезка текста ---
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// --- Секция ---
+@mixin section-padding {
+  padding: $spacing-3xl 0;
+
+  @include tablet {
+    padding: $spacing-4xl 0;
+  }
+
+  @include laptop {
+    padding: $spacing-5xl 0;
+  }
+}
+
+// --- Заголовок секции ---
+@mixin section-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  text-align: center;
+
+  @include tablet {
+    font-size: $font-size-3xl;
+  }
+
+  @include laptop {
+    font-size: $font-size-4xl;
+  }
+}

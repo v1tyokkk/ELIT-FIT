@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Калькулятор стоимости абонемента ELITE FIT — рассчитайте цену тарифа с учётом срока подписки и дополнительных услуг.">
+  <title>ELITE FIT — Калькулятор стоимости</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-calc">
+
+  <!-- =================== HEADER =================== -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">ELITE <span>FIT</span></a>
+
+      <input class="header__menu-state" type="checkbox" id="header-menu">
+      <label class="header__burger" for="header-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="header__nav" aria-label="Основная навигация">
+        <a href="index.html#home" class="header__nav-link">Главная</a>
+        <a href="index.html#directions" class="header__nav-link">Направления</a>
+        <a href="index.html#gallery" class="header__nav-link">Галерея</a>
+        <a href="index.html#video" class="header__nav-link">Видео</a>
+        <a href="index.html#pricing" class="header__nav-link">Цены</a>
+        <a href="calc.html" class="header__nav-link header__nav-link--active" aria-current="page">Калькулятор</a>
+        <a href="index.html#contact" class="header__nav-link">Контакты</a>
+      </nav>
+
+      <nav class="header__mobile-menu" aria-label="Мобильная навигация">
+        <a href="index.html#home" class="header__mobile-link">Главная</a>
+        <a href="index.html#directions" class="header__mobile-link">Направления</a>
+        <a href="index.html#gallery" class="header__mobile-link">Галерея</a>
+        <a href="index.html#video" class="header__mobile-link">Видео</a>
+        <a href="index.html#pricing" class="header__mobile-link">Цены</a>
+        <a href="calc.html" class="header__mobile-link header__mobile-link--active" aria-current="page">Калькулятор</a>
+        <a href="index.html#contact" class="header__mobile-link">Контакты</a>
+        <a href="index.html" class="header__mobile-logo">ELITE <span>FIT</span></a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="calc-page" id="calculator">
+    <div class="container">
+      <header class="calc-page__header">
+        <h1 class="section-title">Калькулятор стоимости</h1>
+        <p class="section-subtitle">
+          Выберите тариф, срок подписки и дополнительные услуги — итоговая сумма обновляется автоматически
+        </p>
+      </header>
+
+      <div class="calc-page__layout">
+        <form class="calc-form" id="calc-form">
+          <fieldset class="calc-field">
+            <legend class="calc-field__legend">Тариф</legend>
+            <div class="calc-options">
+              <label class="calc-option">
+                <input type="radio" name="tariff" value="group" checked>
+                <span class="calc-option__body">
+                  <span class="calc-option__title">GROUP</span>
+                  <span class="calc-option__desc">Групповые тренировки</span>
+                  <span class="calc-option__price">220 руб. / месяц</span>
+                </span>
+              </label>
+              <label class="calc-option">
+                <input type="radio" name="tariff" value="mix">
+                <span class="calc-option__body">
+                  <span class="calc-option__title">MIX</span>
+                  <span class="calc-option__desc">Группы + тренажёрный зал</span>
+                  <span class="calc-option__price">340 руб. / месяц</span>
+                </span>
+              </label>
+              <label class="calc-option">
+                <input type="radio" name="tariff" value="unlimit">
+                <span class="calc-option__body">
+                  <span class="calc-option__title">UNLIMIT</span>
+                  <span class="calc-option__desc">Максимум возможностей, 8 персональных тренировок</span>
+                  <span class="calc-option__price">670 руб. / месяц</span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="calc-form__row">
+            <fieldset class="calc-field">
+              <legend class="calc-field__legend">Срок подписки</legend>
+              <label class="calc-field__label" for="period">Период оплаты</label>
+              <select class="calc-select" id="period" name="period">
+                <option value="1">1 месяц — без скидки</option>
+                <option value="3">3 месяца — скидка 5%</option>
+                <option value="6">6 месяцев — скидка 10%</option>
+                <option value="12">12 месяцев — скидка 15%</option>
+              </select>
+              <p class="calc-field__hint">
+                * Скидки действуют на оплату абонемента на 3, 6 и 12 месяцев, как указано в разделе «Цены».
+              </p>
+            </fieldset>
+
+            <fieldset class="calc-field">
+              <legend class="calc-field__legend">Доп. услуги</legend>
+              <label class="calc-field__label" for="extraPersonal">Перс. тренировки</label>
+              <p class="calc-field__rate">Стоимость: <strong>35 руб.</strong> за тренировку</p>
+              <input
+                class="calc-input"
+                type="number"
+                id="extraPersonal"
+                name="extraPersonal"
+                min="0"
+                max="30"
+                step="1"
+                value="0"
+                inputmode="numeric"
+              >
+              <p class="calc-field__hint">
+                Стоимость одной дополнительной тренировки — 35 руб. В тарифе UNLIMIT уже включено 8 персональных занятий.
+              </p>
+            </fieldset>
+          </div>
+        </form>
+
+        <aside class="calc-result" aria-live="polite" aria-atomic="true">
+          <div class="calc-result__card">
+            <p class="calc-result__label">Итого к оплате</p>
+            <p class="calc-result__total" id="calc-total">0 руб.</p>
+            <p class="calc-result__summary" id="calc-summary">Выберите параметры абонемента.</p>
+
+            <div class="calc-result__rows">
+              <p class="calc-result__row">
+                <span>Средняя цена в месяц</span>
+                <strong id="calc-monthly">0 руб.</strong>
+              </p>
+              <p class="calc-result__row">
+                <span>Экономия по скидке</span>
+                <strong id="calc-savings">0 руб.</strong>
+              </p>
+              <p class="calc-result__row">
+                <span>Доп. тренировки</span>
+                <strong id="calc-personal-cost">0 руб.</strong>
+              </p>
+            </div>
+
+            <div class="calc-result__actions">
+              <a href="index.html#contact" class="btn btn--primary">Оформить абонемент</a>
+              <a href="index.html#pricing" class="btn btn--outline">Сравнить тарифы</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">ELITE <span>FIT</span></a>
+        <p class="footer__brand-desc">
+          Премиальный фитнес-клуб для тех, кто стремится к совершенству
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer__col-title">Разработчик</h2>
+        <div class="footer__dev">
+          <p class="footer__dev-name">Viktar Tsybulskas</p>
+          <div class="footer__dev-links">
+            <a href="#" class="footer__dev-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M9 14l-2 2-2-2m4-8l4 4 4-4"/>
+              </svg>
+              — Figma
+            </a>
+            <a href="#" class="footer__dev-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7C6.73 19.91 6.14 18 6.14 18c-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.115 2.5.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/>
+              </svg>
+              — GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="footer__col-title">Контакты</h2>
+        <div class="footer__contacts">
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            г. Брест, ул. Московская, д. 201
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.19 6.19l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            +375(33)777-77-77
+          </div>
+          <div class="footer__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            info@elitefit.com
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="footer__col-title">Режим работы</h2>
+        <p class="footer__hours">Понедельник — Воскресенье</p>
+        <p class="footer__hours-value">24/7</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 ELITE FIT. Все права защищены.</p>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">SEO</a>
+        <a href="#" class="footer__bottom-link">ЗОЖ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="calc.js" defer></script>
+</body>
+</html>

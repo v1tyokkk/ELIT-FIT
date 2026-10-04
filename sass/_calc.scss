@@ -1,0 +1,541 @@
+/* ============================================
+   Calculator page
+   ============================================ */
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/placeholders' as *;
+@use 'abstracts/functions' as *;
+
+.page-calc {
+  .header {
+    background: linear-gradient(
+      180deg,
+      rgba(50, 51, 53, 0.96) 0%,
+      rgba(50, 51, 53, 0.72) 72%,
+      rgba(50, 51, 53, 0) 100%
+    );
+  }
+
+  @include laptop {
+    .footer {
+      padding-top: 48px;
+    }
+  }
+}
+
+.calc-page {
+  padding: 96px 0 64px;
+  background-color: #323335;
+  min-height: 100vh;
+
+  @include tablet {
+    padding: 88px 0 72px;
+  }
+
+  @include laptop {
+    padding: 72px 0 40px;
+    min-height: auto;
+    display: block;
+    overflow: visible;
+
+    > .container {
+      display: block;
+      min-height: auto;
+    }
+  }
+}
+
+.calc-page__header {
+  margin-bottom: $spacing-2xl;
+  text-align: center;
+
+  @include laptop {
+    flex-shrink: 0;
+    margin-bottom: $spacing-md;
+  }
+
+  .section-title {
+    font-size: rem(37);
+    font-weight: $font-weight-black;
+    line-height: 1.05;
+    margin-bottom: $spacing-md;
+
+    @include tablet {
+      font-size: rem(38);
+    }
+
+    @include laptop {
+      font-size: rem(36);
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  .section-subtitle {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: $font-size-sm;
+    line-height: 1.35;
+    color: #c8c8c8;
+
+    @include tablet {
+      font-size: $font-size-md;
+    }
+
+    @include laptop {
+      font-size: $font-size-base;
+      line-height: 1.3;
+    }
+  }
+}
+
+.calc-page__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+  align-items: start;
+
+  @include laptop {
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+    gap: $spacing-md;
+    align-items: start;
+  }
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  @include laptop {
+    gap: $spacing-sm;
+    overflow: visible;
+  }
+}
+
+.calc-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $spacing-md;
+    align-items: stretch;
+  }
+
+  .calc-field {
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 168px;
+    }
+  }
+
+  .calc-field__legend {
+    @include laptop {
+      flex-shrink: 0;
+      min-height: 1.2em;
+      margin-bottom: $spacing-md;
+      white-space: nowrap;
+    }
+  }
+
+  .calc-field__label {
+    @include laptop {
+      flex-shrink: 0;
+      min-height: auto;
+      margin-bottom: $spacing-xs;
+    }
+  }
+
+  .calc-field__rate {
+    @include laptop {
+      flex-shrink: 0;
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  .calc-select,
+  .calc-input {
+    @include laptop {
+      margin-top: auto;
+    }
+  }
+}
+
+.calc-field {
+  @extend %card;
+  background-color: #3d3e40;
+  border: 2px solid #68696b;
+  border-radius: $border-radius-xl;
+  padding: $spacing-lg $spacing-md;
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.12);
+  min-width: 0;
+
+  @include tablet {
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  @include laptop {
+    padding: $spacing-md $spacing-lg;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.calc-field__legend {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-black;
+  color: $color-white;
+  margin-bottom: $spacing-md;
+  line-height: 1.2;
+
+  @include laptop {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+.calc-field__label {
+  display: block;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-grey;
+  margin-bottom: $spacing-sm;
+
+  @include laptop {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.calc-field__rate {
+  font-size: $font-size-sm;
+  color: $color-grey;
+  margin-bottom: $spacing-sm;
+  line-height: 1.3;
+
+  @include laptop {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-md;
+  }
+
+  strong {
+    color: $color-white;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.calc-field__hint {
+  font-size: $font-size-sm;
+  color: $color-grey;
+  margin-top: $spacing-sm;
+  line-height: 1.35;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.calc-options {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: $spacing-sm;
+  }
+}
+
+.calc-option {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  border-radius: $border-radius-lg;
+  border: 2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  min-width: 0;
+
+  @include laptop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-xs;
+    padding: $spacing-md $spacing-sm;
+    border-radius: $border-radius-md;
+  }
+
+  &:hover {
+    border-color: rgba($color-purple, 0.45);
+  }
+
+  &:has(input:checked) {
+    border-color: $color-purple;
+    background-color: rgba($color-purple, 0.12);
+  }
+
+  input {
+    margin-top: 4px;
+    accent-color: $color-purple;
+    flex-shrink: 0;
+
+    @include laptop {
+      margin-top: 0;
+    }
+  }
+}
+
+.calc-option__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.calc-option__title {
+  font-size: $font-size-md;
+  font-weight: $font-weight-black;
+  color: $color-purple;
+  text-transform: uppercase;
+
+  @include laptop {
+    font-size: $font-size-md;
+    line-height: 1.15;
+  }
+}
+
+.calc-option__desc {
+  font-size: $font-size-sm;
+  color: $color-white;
+  line-height: 1.25;
+
+  @include laptop {
+    display: block;
+    font-size: $font-size-xs;
+    line-height: 1.2;
+  }
+}
+
+.calc-option__price {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $color-grey;
+  margin-top: 2px;
+
+  @include laptop {
+    font-size: $font-size-sm;
+    margin-top: 2px;
+    line-height: 1.2;
+  }
+}
+
+.calc-select,
+.calc-input {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border-radius: $border-radius-lg;
+  border: 2px solid #68696b;
+  background-color: $color-input-bg;
+  color: $color-white;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  transition: border-color 0.3s ease;
+
+  @include laptop {
+    min-height: 48px;
+    padding: 10px 14px;
+    font-size: $font-size-base;
+    border-radius: $border-radius-md;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-purple;
+  }
+}
+
+.calc-result {
+  position: relative;
+
+  @include laptop {
+    align-self: start;
+    width: 100%;
+  }
+}
+
+.calc-result__card {
+  @extend %card;
+  background-color: #3d3e40;
+  border: 3px solid $color-purple;
+  border-radius: $border-radius-xl;
+  padding: $spacing-xl $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.12);
+  min-width: 0;
+
+  &:hover {
+    transform: none;
+  }
+
+  @include laptop {
+    height: auto;
+    padding: $spacing-md $spacing-lg;
+    gap: $spacing-sm;
+    border-width: 2px;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+.calc-result__label {
+  font-size: $font-size-sm;
+  color: $color-grey;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  @include laptop {
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+}
+
+.calc-result__total {
+  font-size: rem(36);
+  font-weight: $font-weight-black;
+  color: $color-white;
+  line-height: 1;
+
+  @include tablet {
+    font-size: rem(42);
+  }
+
+  @include laptop {
+    font-size: rem(40);
+    line-height: 1.05;
+  }
+}
+
+.calc-result__rows {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding-top: $spacing-sm;
+  border-top: 1px solid $color-border;
+
+  @include laptop {
+    gap: 6px;
+    padding-top: $spacing-sm;
+    margin-top: 2px;
+  }
+}
+
+.calc-result__row {
+  @include flex-between;
+  gap: $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-grey;
+
+  @include laptop {
+    font-size: $font-size-base;
+    gap: $spacing-md;
+    line-height: 1.2;
+  }
+
+  strong {
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+
+    @include laptop {
+      font-size: $font-size-md;
+    }
+  }
+}
+
+.calc-result__summary {
+  font-size: $font-size-sm;
+  color: #c8c8c8;
+  line-height: 1.4;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.calc-result__actions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+
+  @include laptop {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $spacing-sm;
+    margin-top: $spacing-sm;
+    padding-top: $spacing-sm;
+    border-top: 1px solid $color-border;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 52px;
+    font-weight: $font-weight-black;
+
+    @include laptop {
+      min-height: 46px;
+      padding: 10px 14px;
+      font-size: $font-size-base;
+    }
+  }
+}
+
+.header__nav-link--active,
+.header__mobile-link--active {
+  color: $color-purple;
+}
+
+@include mobile {
+  .calc-page__layout {
+    gap: $spacing-lg;
+  }
+
+  .calc-field {
+    padding: $spacing-md;
+    border-radius: $border-radius-lg;
+  }
+
+  .calc-field__legend {
+    font-size: $font-size-md;
+  }
+
+  .calc-option {
+    padding: $spacing-sm $spacing-md;
+  }
+
+  .calc-option__title {
+    font-size: $font-size-base;
+  }
+
+  .calc-result__card {
+    padding: $spacing-lg $spacing-md;
+  }
+
+  .calc-result__total {
+    font-size: rem(32);
+  }
+}

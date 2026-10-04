@@ -1,0 +1,246 @@
+/* ============================================
+   Contact
+   ============================================ */
+.contact {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 74px;
+  background-color: #1f2224;
+}
+
+.contact__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.38) saturate(0.82);
+}
+
+.contact::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(27, 30, 32, 0.58);
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 74px 0 78px;
+  }
+
+  .contact__inner {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    padding: 68px 0 60px;
+  }
+
+  .contact__inner {
+    padding: 0 48px;
+  }
+}
+
+.contact__header {
+  margin-bottom: 54px;
+  text-align: center;
+}
+
+.contact .section-title {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+
+.contact .section-subtitle {
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.contact__form {
+  max-width: 682px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 40px 58px 28px;
+  border: 4px solid rgba(112, 116, 122, 0.7);
+  border-radius: 32px;
+  background: rgba(31, 34, 36, 0.78);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(4px);
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact__field label {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.contact__field input,
+.contact__field textarea {
+  min-height: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.82);
+  border-radius: 11px;
+  background: rgba(128, 130, 132, 0.72);
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 18px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+}
+
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-color: #8015F0;
+  background: rgba(120, 122, 124, 0.88);
+}
+
+.contact__field textarea {
+  min-height: 206px;
+  resize: vertical;
+}
+
+.contact__submit {
+  width: min(100%, 424px);
+  min-height: 41px;
+  margin: 8px auto 0;
+  padding: 8px 18px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(90deg, #7b16f0 0%, #9b16f4 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact__submit svg {
+  width: 29px;
+  height: 29px;
+  flex: 0 0 auto;
+}
+
+.contact__submit:hover {
+  background: linear-gradient(90deg, #8b25ff 0%, #aa2cff 100%);
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 49px 0 42px;
+  }
+
+  .contact__inner {
+    padding: 0 26px;
+  }
+
+  .contact__header {
+    margin-bottom: 21px;
+  }
+
+  .contact .section-title {
+    font-size: 28px;
+    line-height: 1.08;
+  }
+
+  .contact .section-subtitle {
+    font-size: 12px;
+  }
+
+  .contact__form {
+    gap: 13px;
+    padding: 22px 22px 16px;
+    border-width: 2px;
+    border-radius: 16px;
+  }
+
+  .contact__field {
+    gap: 5px;
+  }
+
+  .contact__field label {
+    font-size: 12px;
+  }
+
+  .contact__field input,
+  .contact__field textarea {
+    min-height: 28px;
+    border-radius: 5px;
+    padding: 6px 7px;
+    font-size: 12px;
+  }
+
+  .contact__field textarea {
+    min-height: 113px;
+  }
+
+  .contact__submit {
+    width: min(100%, 193px);
+    min-height: 26px;
+    margin-top: 2px;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  .contact__submit svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact .section-title {
+    font-size: 42px;
+  }
+
+  .contact .section-subtitle {
+    font-size: 16px;
+  }
+
+  .contact__form {
+    max-width: 600px;
+    padding: 34px 42px 26px;
+    border-radius: 24px;
+  }
+}

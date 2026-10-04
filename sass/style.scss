@@ -1,0 +1,25 @@
+// ============================================
+// ELITE FIT — style.scss
+// Главный файл: аккумулирует все партиалы
+// ============================================
+
+// --- Abstracts (без вывода CSS) ---
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/placeholders' as *;
+
+// --- Base ---
+@use 'base/reset';
+@use 'base/typography';
+
+// --- Компоненты ---
+@use 'header';
+@use 'hero';
+@use 'directions';
+@use 'gallery';
+@use 'video';
+@use 'pricing';
+@use 'contact';
+@use 'calc';
+@use 'footer';

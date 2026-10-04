@@ -1,0 +1,61 @@
+// ============================================
+// ELITE FIT — Sass переменные
+// ============================================
+
+// --- Цвета ---
+$color-bg-dark:   #000000;
+$color-purple:    #8015F0;
+$color-purple-hover: #6a0fd0;
+$color-white:     #ffffff;
+$color-grey:      #BDBDBD;
+$color-card-bg:   #1a1a1a;
+$color-section-bg:#111111;
+$color-input-bg:  #222222;
+$color-border:    #333333;
+$color-overlay:   rgba(0, 0, 0, 0.55);
+
+// --- Типографика ---
+$font-family:     'Inter', sans-serif;
+
+$font-size-xs:    12px;
+$font-size-sm:    14px;
+$font-size-base:  16px;
+$font-size-md:    18px;
+$font-size-lg:    20px;
+$font-size-xl:    24px;
+$font-size-2xl:   32px;
+$font-size-3xl:   40px;
+$font-size-4xl:   56px;
+
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+$font-weight-black:   900;
+
+// --- Отступы ---
+$spacing-xs:   4px;
+$spacing-sm:   8px;
+$spacing-md:   16px;
+$spacing-lg:   24px;
+$spacing-xl:   32px;
+$spacing-2xl:  48px;
+$spacing-3xl:  64px;
+$spacing-4xl:  80px;
+$spacing-5xl:  100px;
+
+// --- Скругления ---
+$border-radius-sm:  4px;
+$border-radius-md:  8px;
+$border-radius-lg:  12px;
+$border-radius-xl:  20px;
+$border-radius-pill: 50px;
+
+// --- Брейкпоинты ---
+$bp-mobile:   320px;
+$bp-tablet:   768px;
+$bp-laptop:   1024px;
+$bp-desktop:  1280px;
+
+// --- Контейнер ---
+$container-max-width: 1200px;
+$container-padding:   $spacing-md;
